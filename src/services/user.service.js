@@ -1,6 +1,10 @@
-import userDocument from '../../database/users.json' assert {type: 'json'};
+const userDocument = require("../../database/users.json")
 
-export const getUserByEmail = (email) => {
+const getUserByEmail = (email) => {
   return userDocument
     .filter(user => user.email === email)[0]
+}
+
+module.exports = {
+  getUserByEmail
 }

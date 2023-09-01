@@ -1,9 +1,9 @@
-import express from "express"
+const express = require("express")
+
 const UserRouter = express.Router()
 
 UserRouter.get("/user/details", (req,res) => {
   res.json("user")
 })
 
-
-export default UserRouter
+module.exports = UserRouter

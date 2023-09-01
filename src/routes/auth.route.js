@@ -1,9 +1,9 @@
-import express from "express"
-import bcrypt from "bcrypt"
+const express = require("express")
+const bcrypt = require("bcrypt")
 
 const AuthRouter = express.Router()
 
-import { getUserByEmail } from '../services/user.service.js'
+const { getUserByEmail } = require("../services/user.service")
 
 AuthRouter.post("/login", (req,res) => {
   const { email, password } = req.body
@@ -30,4 +30,4 @@ AuthRouter.post("/login", (req,res) => {
 
 })
 
-export default AuthRouter
+module.exports = AuthRouter
